@@ -7,8 +7,6 @@ const Layout = ({ data }) => {
   const { edges } = data.allMarkdownRemark
   return (
     <LayoutBase>
-      
-      
       <h3>Latest Posts</h3>
       <div>
         {edges.map(edge => {
