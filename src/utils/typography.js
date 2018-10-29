@@ -1,6 +1,18 @@
 import Typography from 'typography'
-import githubTheme from 'typography-theme-anonymous'
+import myTheme from 'typography-theme-moraga'
 
-const typography = new Typography(githubTheme);
+console.log('theme', myTheme);
+
+
+myTheme.overrideThemeStyles = ({ rhythm }, options) => ({
+    'a': {
+      color:`#988146`
+    }
+  })
+
+const typography = new Typography(myTheme);
+
+
+console.log('typo', typography);
 
 export default typography

@@ -12,6 +12,7 @@ const Navigation = () => {
         <ul style={{ marginBottom: `1em`}}>
             <ListLink to="/">Home</ListLink>
             <ListLink to="/me/">Me</ListLink>
+            <ListLink to="/blog/">Blog</ListLink>
         </ul>
     )
 

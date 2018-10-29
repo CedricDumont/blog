@@ -5,7 +5,6 @@ import Navigation from "./Navigation"
 
 
 const MyHeaderLayout = ({ data }) => {
-    console.log('composed', data);
     return (
         <div>
             <SiteTitle data={data} />

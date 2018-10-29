@@ -87,8 +87,6 @@ exports.createPages = (({ graphql, actions }) => {
       ).then(result => {
         const posts = result.data.allMarkdownRemark.edges
 
-        console.log(posts);
-
         createTagPages(createPage, posts)
 
         posts.forEach(({ node }, index) => {

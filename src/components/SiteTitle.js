@@ -8,10 +8,10 @@ const SiteTitle = ({ data }) => {
 
     return (
         <div>
-            <Link to="/" style={{ textShadow: `none`, color:`black`}}>
+            <Link to="/" style={{ textDecoration:`none`, textShadow: `none`, color:`black`}}>
                 <h2 style={{ margin:`0 0 0 0`}}>{title}</h2>
             </Link>
-            <h6 style={{ textShadow: `none`, color:`black`, marginTop:`0.5em`}}>{description}</h6>
+            <h6 style={{ textShadow: `none`, color:`#988146`, marginTop:`0.5em`}}>{description}</h6>
 
         </div>
     )

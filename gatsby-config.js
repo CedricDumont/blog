@@ -13,11 +13,21 @@ module.exports = {
         {
             resolve: `gatsby-transformer-remark`,
             options: {
-              plugins: [
-                `gatsby-remark-copy-images`,
-              ]
+                plugins: [
+                    `gatsby-remark-copy-images`,
+                    {
+                        resolve: `gatsby-remark-prismjs`,
+                        options: {
+                            classPrefix: "language-", 
+                            inlineCodeMarker: null,
+                            aliases: {},
+                            showLineNumbers: false,
+                            noInlineHighlight: false,
+                        },
+                    }
+                ]
             }
-          },
+        },
         {
             resolve: `gatsby-source-filesystem`,
             options: {

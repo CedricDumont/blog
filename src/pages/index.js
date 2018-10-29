@@ -7,26 +7,35 @@ const Layout = ({ data }) => {
   const { edges } = data.allMarkdownRemark
   return (
     <LayoutBase>
+      
+      
+      <h3>Latest Posts</h3>
       <div>
         {edges.map(edge => {
-          console.log('node is', edge);
-          const { frontmatter , fields} = edge.node
+          const { frontmatter, fields} = edge.node
           return (
             <div
               key={fields.slug}
               style={{ marginBottom: '1rem' }}
             >
               <Link to={fields.slug}>
-                {frontmatter.title}
+                <div>
+                  {frontmatter.title}
+                </div>
+                <div style={{ fontSize: `0.7rem` }}>
+                  {new Intl.DateTimeFormat('en-GB', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: '2-digit'
+                  }).format(new Date(frontmatter.date))}
+                </div>
               </Link>
+              <p />
             </div>
           )
         })}
-
-        <div>
-          <Link to='/tags'>Browse by Tag</Link>
-        </div>
       </div>
+      
     </LayoutBase>
   )
 }
@@ -34,6 +43,7 @@ const Layout = ({ data }) => {
 export const query = graphql`
   query HomepageQuery {
     allMarkdownRemark(
+      limit:6,
       sort: {order: DESC, fields: [frontmatter___date]}
     ) {
       edges {
