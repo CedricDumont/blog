@@ -4,6 +4,7 @@ module.exports = {
         description: "A developer's braindump"
     },
     plugins: [
+       
         {
             resolve: `gatsby-plugin-typography`,
             options: {
@@ -18,7 +19,7 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
-                            classPrefix: "language-", 
+                            classPrefix: "language-",
                             inlineCodeMarker: null,
                             aliases: {},
                             showLineNumbers: false,
@@ -28,6 +29,19 @@ module.exports = {
                 ]
             }
         },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Cedric-Dumont`,
+                short_name: `Cedu`,
+                start_url: `/`,
+                background_color: `#fff`,
+                theme_color: `#988146`,
+                display: `minimal-ui`,
+                icon: `src/images/profile.jpeg`, // This path is relative to the root of the site.
+            },
+        },
+        `gatsby-plugin-offline`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
