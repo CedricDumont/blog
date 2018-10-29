@@ -13,7 +13,6 @@ const Layout = ({ data }) => {
             <p></p>
             <div>
                 {edges.map(edge => {
-                    console.log('node is', edge);
                     const { frontmatter, fields } = edge.node
                     return (
                         <div
