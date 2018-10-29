@@ -18,7 +18,7 @@ This Part deals with IdentityServer.V3 installation and configuration using Memb
 
 start visual studio and create an empty web project
 
-[![empty web project](22-1-1.jpg?w=300)](22-1-1.jpg)
+[![empty web project](22-1-1.jpg)](22-1-1.jpg)
 
 **Step 2 : add the Dependencies**
 
@@ -62,7 +62,7 @@ open a visual studio command prompt. (for me it was located here : C:\Program Fi
 
 Create a _Config_ folder in your solution and copy the YourCertFileName**.pfx** over there. (here _MixItTest.pfx_)
 
-[![1.2](22-1-2.jpg?w=300)](22-1-2.jpg)
+[![1.2](22-1-2.jpg)](22-1-2.jpg)
 
 On the properties of the pfx file, set The Copy to Output Dir to '_Copy if newer_'
 
@@ -241,11 +241,11 @@ public class Startup
 
 easy to do with visual studio in dev mode : set the property SSL Enabled to true:
 
-[![1.4](22-1-4.jpg?w=300)](22-1-4.jpg)
+[![1.4](22-1-4.jpg)](22-1-4.jpg)
 
 then copy the SSL URL to the clipboard and right click on the project to open the properties. Click the 'Web' Tab and copy the ssl url to Start Url and Project URL .
 
-[![1.5](22-1-5.jpg?w=300)](22-1-5.jpg)
+[![1.5](22-1-5.jpg)](22-1-5.jpg)
 
 **Step 8 : Test it**
 
@@ -255,7 +255,7 @@ At this point, you should have a running IdentityServer. Just run the project an
 
 the browser should display something like this:
 
-[![1.6](22-1-6.jpg?w=300)](22-1-6.jpg)
+[![1.6](22-1-6.jpg)](22-1-6.jpg)
 
 **Step 9 : configure IdentityManager.**
 
@@ -320,7 +320,7 @@ _"MyIdentityDb" _ is the connection string that you configured in the _Web.conf
 
 To test it go to the following address: https://localhost:44305/admin#/
 you should see something like this:
-[![1.7](22-1-7.jpg?w=300)](22-1-7.jpg)
+[![1.7](22-1-7.jpg)](22-1-7.jpg)
 
 Try it and create a user 'test' for example. we will use 'Fiddler' to get a token using post requests with the Client that we have configured.
 
@@ -349,11 +349,11 @@ grant_type=password&username=test&password=tes5&scope=openid
 
 _<small>(the string SWRlbnRpdHlXZWJVSTpzZWNyZXQ= comes from the Base64 encoding of IdentityWebUI:secret which is our clientId and client secret located in our Clients.cs file. I use the Fiddler text wizard to do that.)</small>_
 
-[![1.8](22-1-8.jpg?w=270)](22-1-8.jpg)
+[![1.8](22-1-8.jpg)](22-1-8.jpg)
 
 If you have created a user with username = 'test' and password  ='test', then the result will give you an access token:
 
-[![1.9](22-1-9.jpg?w=300)](22-1-9.jpg)
+[![1.9](22-1-9.jpg)](22-1-9.jpg)
 
 If you try with an incorrect password for example, you should receive the following:
 
@@ -362,148 +362,3 @@ _{"error":"invalid_grant"}_
 That's it ! in the next article, we will create the webapi that will be used to create a user using membershipreboot
 
 As Usual, comments are welcome and even remarks to update this little documentation.
-
-## Comments from WordPress
-
-* **[IdentityServer.v3, MembershipReboot, AngularJs, WebApi 2 and MVC : Mix It ! | {&quot;@id&quot;:&quot;cedric-dumont.com&quot;}](http://cedric-dumont.com/2014/12/26/identityserver-v3-membershipreboot-angularjs-webapi-2-and-mvc-mix-it/)** 2014-12-27T14:41:09Z
-  > [&#8230;] links to parts : part 1 - part 2 - part 3 &#8211; part 4 &#8211; part [&#8230;]
-* ![ericswann](https://www.gravatar.com/avatar/7623f1388a30faa176c90a113a17ce4e?d=identicon) **ericswann** 2015-02-06T14:23:51Z
-  > Thanks for the demo, seems like this has fallen behind the MembershipReboot setup with IdentityServer.  I used the following sample project to get things working:  https://github.com/IdentityServer/Thinktecture.IdentityServer3.Samples/tree/master/source/MembershipReboot/SelfHost
-* ![cedricdumontc](https://www.gravatar.com/avatar/0c2381d0c8780aa27737666af4c913f6?d=identicon) **[cedricdumontc](http://cedricdumont.wordpress.com)** 2015-02-06T18:11:04Z
-  > yes i have to update my code to use the new released version. i ve been following thinktecture identity server for month now and wanted to check if i could use it in my own use case. response is yes of course, but i have not much time to update
-* ![cbmdk](https://www.gravatar.com/avatar/8752c22728f527bd8022f02eb7091fbc?d=identicon) **[cbmdk](http://gravatar.com/cbmdk)** 2015-03-24T09:18:44Z
-  > Hey Cedric,  > 
-  > Do you have any plans on updating your solution to match the recent MembershipReboot changes.  > 
-  >   > 
-  > Awesome articles, helped me a lot on getting things setup!!!
-* ![cedricdumontc](https://www.gravatar.com/avatar/0c2381d0c8780aa27737666af4c913f6?d=identicon) **[cedricdumontc](http://cedricdumont.wordpress.com)** 2015-03-25T09:16:11Z
-  > Hi,   > 
-  > yes I will update it, but I am currently working on the angular part to have a service that will ease using openid (some patterns). =&gt; https://github.com/CedricDumont/angular-toolkit
-* ![cedricdumontc](https://www.gravatar.com/avatar/0c2381d0c8780aa27737666af4c913f6?d=identicon) **[cedricdumontc](http://cedricdumont.wordpress.com)** 2015-04-17T05:14:29Z
-  > Hi, in fact I will update it with some changes : Owin to asp.net 5 (or vnext in Vs 2015) and angular to aurelia.... but I have a huge heap of work and I started a new own project where I will use Idsrv 3 and aurelia (aurelia.io) ... so it's taking me a lot of time. But perhaps it would be better to just update the code for now (with a new angular-toolkit.js file I've created to get openid (idsrv3, salesforce, google... ) support and add changes later on... I will try to do it this weekend
-* ![Domen Kogler](https://www.gravatar.com/avatar/5fc617a885edbfb86637e37a65618420?d=identicon) **Domen Kogler** 2015-06-22T18:40:33Z
-  > Hi, I would love to see an update to vnext and aurelia. How is the update going?
-* ![Michal](https://www.gravatar.com/avatar/a30cd95a2632ca3e35da2fe8db3a4994?d=identicon) **Michal** 2015-04-17T20:33:39Z
-  > Now it's required for the secret to be hashed. You can simply change "secret" to "secret".Sha256()
-* ![cedricdumontc](https://www.gravatar.com/avatar/0c2381d0c8780aa27737666af4c913f6?d=identicon) **[cedricdumontc](http://cedricdumont.wordpress.com)** 2015-04-18T08:28:42Z
-  > FYI : hi, here there is a repo with idsrv on asp.net 5 (vnext) : https://github.com/CedricDumont/vnext-playground/tree/master/idsrv3-vnext/idsrv3.
-* ![Srinivas](https://www.gravatar.com/avatar/3b7edf48b1bb9acdca653698dfe787bb?d=identicon) **Srinivas** 2015-04-16T20:00:07Z
-  > Hello Cedric,  > 
-  >   > 
-  > Your artcile helping several people. Yours is the best among all other whatever I came accross.   > 
-  >   > 
-  > Could you please update your solution on GitHub with new packages?  > 
-  >   > 
-  > There are two errors with new packages.  > 
-  > 1) Not finding IdentityManagerConfiguration in Startup.cs   > 
-  >   public void Configuration(IAppBuilder app)  > 
-  >         {  > 
-  >             app.Map("/admin", adminApp =&gt;  > 
-  >             {  > 
-  >                 var factory = new MembershipRebootIdentityManagerFactory("MyIdentityDb");  > 
-  >                 adminApp.UseIdentityManager(new IdentityManagerConfiguration()  > 
-  >                 {  > 
-  >                     IdentityManagerFactory = factory.Create  > 
-  >                 });  > 
-  >             });  > 
-  > 2) Not finding DisposableIdentityManagerService in MembershipRebootIdentityManagerFactory  > 
-  > return new DisposableIdentityManagerService(svc, db);   > 
-  >   > 
-  > I tried to remove these errors but could not succeeded.   > 
-  >   > 
-  > Thanks for all your hardwork.
-* ![skorlipara](https://www.gravatar.com/avatar/3aef0978475f9f0adae3db68d7d98ed9?d=identicon) **[skorlipara](http://skorlipara.wordpress.com)** 2015-04-16T20:00:53Z
-  > Hello Cedric,  > 
-  >   > 
-  > Your artcile helping several people. Yours is the best among all other whatever I came accross.  > 
-  >   > 
-  > Could you please update your solution on GitHub with new packages?  > 
-  >   > 
-  > There are two errors with new packages.  > 
-  > 1) Not finding IdentityManagerConfiguration in Startup.cs  > 
-  > public void Configuration(IAppBuilder app)  > 
-  > {  > 
-  > app.Map(“/admin”, adminApp =&gt;  > 
-  > {  > 
-  > var factory = new MembershipRebootIdentityManagerFactory(“MyIdentityDb”);  > 
-  > adminApp.UseIdentityManager(new IdentityManagerConfiguration()  > 
-  > {  > 
-  > IdentityManagerFactory = factory.Create  > 
-  > });  > 
-  > });  > 
-  > 2) Not finding DisposableIdentityManagerService in MembershipRebootIdentityManagerFactory  > 
-  > return new DisposableIdentityManagerService(svc, db);  > 
-  >   > 
-  > I tried to remove these errors but could not succeeded.  > 
-  >   > 
-  > Thanks for all your hardwork.
-* ![firas007](https://www.gravatar.com/avatar/fac28438c2aca20788b76aff2450db5d?d=identicon) **firas007** 2015-08-09T14:12:05Z
-  > Hey Cedric,  > 
-  >   > 
-  > Just downloaded your sample from Github and complied it but the MembershipReboot part doesn't work probably. The call to /admin/api when hitting https://localhost:44305/admin#/ returns an error with the following JSON truncated message:  > 
-  > exceptionMessage=An error occurred when trying to create a controller of type 'MetaController'. Make sure that the controller has a parameterless public constructor.  > 
-  > exceptionMessage=An exception was thrown while executing a resolve operation. See the InnerException for details. ---&gt; A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified) (See inner exception for details.)  > 
-  >   > 
-  > Therefor, "All Users", "Create new" menu items are not showing up.  > 
-  >   > 
-  > Note, I get the same error whether am updating NuGet packages with latest versions or not.  > 
-  >   > 
-  > Can you help with that?  > 
-  >   > 
-  > Firas
-* ![madhav abhyankar](https://www.gravatar.com/avatar/95734896e391e7e95014fa20a2692987?d=identicon) **[madhav abhyankar](http://madhavabhyankar.com)** 2016-02-14T07:47:00Z
-  > To whoever is using the latest Beta package, this is how you configure Identity Manager  > 
-  > app.UseCookieAuthentication(new Microsoft.Owin.Security.Cookies.CookieAuthenticationOptions  > 
-  >             {  > 
-  >                 AuthenticationType = "Cookies"  > 
-  >             });  > 
-  > app.Map("/admin", adminApp =&gt;  > 
-  >             {  > 
-  >   > 
-  >                 var options = new IdentityManagerOptions  > 
-  >                 {  > 
-  >                     Factory = new IdentityManagerServiceFactory  > 
-  >                     {  > 
-  >                         IdentityManagerService = new IdentityManager.Configuration.Registration(  > 
-  >                             new MembershipRebootIdentityManagerFactory("abhyankars.authdb.connection").Create(), "membershiprebootSvc")  > 
-  >                     },  > 
-  >                     SecurityConfiguration = new HostSecurityConfiguration  > 
-  >                     {  > 
-  >                         RequireSsl = false,  > 
-  >                         HostAuthenticationType = "Cookies",  > 
-  >   > 
-  >                     }  > 
-  >                 };  > 
-  >                  app.UseIdentityManager(options);  > 
-  >                  > 
-  >             });  > 
-  >   > 
-  > And for the MembershiprebootFactory:  > 
-  > public IIdentityManagerService Create()  > 
-  >         {  > 
-  >             var db = new DefaultMembershipRebootDatabase("Server=.;Database=abhyankars.authdb;Trusted_connection=true; Connection Timeout=180");  > 
-  >             var userrepo = new DefaultUserAccountRepository(db);  > 
-  >             var usersvc = new UserAccountService(config, userrepo);  > 
-  >   > 
-  >             var grprepo = new DefaultGroupRepository(db);  > 
-  >             var grpsvc = new GroupService(config.DefaultTenant, grprepo);  > 
-  >   > 
-  >             return new MembershipRebootIdentityManagerService(usersvc, userrepo, grpsvc, grprepo);  > 
-  >            // return new DisposableIdentityManagerService(svc, db);  > 
-  >         }
-* ![Rohit](https://www.gravatar.com/avatar/f7dcf094d1751b3fd8a1bb9783c9e33c?d=identicon) **Rohit** 2015-11-17T09:30:38Z
-  > Cedric,  > 
-  > Below packages are not available on nuget  > 
-  >   > 
-  > install-package Thinktecture.IdentityServer.v3.MembershipReboot -pre  > 
-  > nstall-package Thinktecture.IdentityManager.MembershipReboot - pre  > 
-  > install-package Thinktecture.IdentityServer.v3 -pre  > 
-  >   > 
-  > So, can you tell how can we get this ?  > 
-  > Rohit
-* ![philippe](https://www.gravatar.com/avatar/0b52c8738ad4b240730460e4aa526837?d=identicon) **philippe** 2016-03-29T19:28:27Z
-  > New package are :   > 
-  > install-package Thinktecture.IdentityServer3 -pre  > 
-  > install-package IdentityServer3.MembershipReboot -pre
-* ![dougschroeder](https://www.gravatar.com/avatar/d16f27133d48e23fe7a48e0362522a2f?d=identicon) **[dougschroeder](http://gravatar.com/dougschroeder)** 2015-09-17T23:17:53Z
-  > Just wanted to say thanks for your articles - they have been of great value!

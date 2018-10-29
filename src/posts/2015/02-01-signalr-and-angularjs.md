@@ -1,5 +1,4 @@
 ---
-path: "/pages/2015/02/signalr-and-angularjs/"
 date: "2015-02-01T17:30:00Z"
 title: "SignalR and angularJS"
 categories: []

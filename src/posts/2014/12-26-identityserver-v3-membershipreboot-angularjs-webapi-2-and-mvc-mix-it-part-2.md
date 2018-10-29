@@ -20,7 +20,7 @@ In this part we will create and configure the web api that will create User acco
 
 In visual studi create an empty web project and select webapi.
 
-[![2.1](26-8-1.jpg?w=300)](26-8-1.jpg)
+[![2.1](26-8-1.jpg)](26-8-1.jpg)
 
 **Step 2 : Add the nuget packages**
 
@@ -215,42 +215,61 @@ Body:
 ```
 
 Illustration:
-[![2.2](26-8-2.jpg?w=249)](26-8-2.jpg)
+[![2.2](26-8-2.jpg)](26-8-2.jpg)
 
 If everything went well, you should receive a "200 OK" response.
 
 You can also start the project we created in [Part 1 (IdentityServer config)](http://cedric-dumont.com/tutorials/identityserver-v3-membershipreboot-angularjs-webapi-2-and-mvc-mix-it-introduction/identityserver-v3-membershipreboot-angularjs-webapi-2-and-mvc-mix-it-part-1/ "IdentityServer.v3, MembershipReboot, AngularJs, WebApi 2 and MVC : Mix It ! : Part 1") to check if the account is created.
 
-[![2.3](26-8-3.jpg?w=300)](26-8-3.jpg)
+[![2.3](26-8-3.jpg)](26-8-3.jpg)
 
 ## Comments from WordPress
 
 * **[IdentityServer.v3, MembershipReboot, AngularJs, WebApi 2 and MVC : Mix It ! | {&quot;@id&quot;:&quot;cedric-dumont.com&quot;}](http://cedric-dumont.com/2014/12/26/identityserver-v3-membershipreboot-angularjs-webapi-2-and-mvc-mix-it/)** 2014-12-27T14:41:12Z
   > [&#8230;] links to parts : part 1 - part 2 - part 3 &#8211; part 4 &#8211; part [&#8230;]
 * ![OutOfTouch6947](https://www.gravatar.com/avatar/83a7415c1f95d5a5b750e88bd2ddbf46?d=identicon) **OutOfTouch6947** 2015-07-30T17:53:37Z
-  > I do have one question about this part, did you create controller methods to do this to customize the data stored for Identities?  I am just wondering why you didn't just do what Scott did in this post?  > 
-  >   > 
+  > I do have one question about this part, did you create controller methods to do this to customize the data stored for Identities?  I am just wondering why you didn't just do what Scott did in this post?
+  > 
+  > 
+  > 
   > http://www.hanselman.com/blog/ThinktectureIdentityManagerAsAReplacementForTheASPNETWebSiteAdministrationTool.aspx
 * ![josuemb](https://www.gravatar.com/avatar/2fc47e9300e2f09a2acad2ea648ca21a?d=identicon) **[josuemb](http://gravatar.com/josuemb)** 2016-09-20T21:01:11Z
-  > There's a little misspelling error in Step 5 : make Ninject work:  > 
-  >   > 
-  > For Ninject to work, I had to aadd  > 
-  >   > 
-  > Should be:  > 
-  > For Ninject to work, I had to add  > 
-  >   > 
-  > I think it was a typo.  > 
-  >   > 
+  > There's a little misspelling error in Step 5 : make Ninject work:
+  > 
+  > 
+  > 
+  > For Ninject to work, I had to aadd
+  > 
+  > 
+  > 
+  > Should be:
+  > 
+  > For Ninject to work, I had to add
+  > 
+  > 
+  > 
+  > I think it was a typo.
+  > 
+  > 
+  > 
   > Regards.
 * ![Rui Elói](https://www.gravatar.com/avatar/1ddc6c95a43561bb94c3b7df7ec9660e?d=identicon) **[Rui Elói](https://www.facebook.com/app_scoped_user_id/10207057321892196/)** 2015-05-28T22:30:09Z
-  > Hello Cedric,   > 
-  >   > 
-  > first of all great tutorial. I've got a few questions:  > 
-  >   > 
-  > - I'm using this web api (the one that you use to register the account) to also list users and other account management. It's this the right way? The thing is when I add the "Authorization" attribute to my controller and the "app.UseIdentityServerBearerTokenAuthentication" in Startup It always returns me no authorization. I use the same code for the resource Web API and works good.  > 
-  >   > 
-  > - When I request the token how do I request for more than one scope?   > 
-  >   > 
+  > Hello Cedric, 
+  > 
+  > 
+  > 
+  > first of all great tutorial. I've got a few questions:
+  > 
+  > 
+  > 
+  > - I'm using this web api (the one that you use to register the account) to also list users and other account management. It's this the right way? The thing is when I add the "Authorization" attribute to my controller and the "app.UseIdentityServerBearerTokenAuthentication" in Startup It always returns me no authorization. I use the same code for the resource Web API and works good.
+  > 
+  > 
+  > 
+  > - When I request the token how do I request for more than one scope? 
+  > 
+  > 
+  > 
   > Thank you
 * ![OutOfTouch6947](https://www.gravatar.com/avatar/83a7415c1f95d5a5b750e88bd2ddbf46?d=identicon) **OutOfTouch6947** 2015-07-30T19:19:42Z
   > I don't even think I you can just get IdentityManager like Scott did anymore and just run it, for example I don't see where to set AspNetIdentity or MembershipReboot like he did in the new code.

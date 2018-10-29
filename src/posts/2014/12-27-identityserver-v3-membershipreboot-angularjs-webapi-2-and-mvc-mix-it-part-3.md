@@ -14,7 +14,7 @@ This Part will focus on creating a web api that could be called by our AngularJs
 
 **Step 1 : create an empty web project**
 
-[![3.1](27-2-1.jpg?w=300)](27-2-1.jpg)
+[![3.1](27-2-1.jpg)](27-2-1.jpg)
 
 **Step 2 : add the required Nuget package**
 
@@ -172,17 +172,4 @@ Response
 
 [![3.4](27-2-4.jpg)](27-2-4.jpg)Result :
 
-[![3.5](27-2-5.jpg?w=700)](27-2-5.jpg)
-
-## Comments from WordPress
-
-* **[IdentityServer.v3, MembershipReboot, AngularJs, WebApi 2 and MVC : Mix It ! | {&quot;@id&quot;:&quot;cedric-dumont.com&quot;}](http://cedric-dumont.com/2014/12/26/identityserver-v3-membershipreboot-angularjs-webapi-2-and-mvc-mix-it/)** 2014-12-27T14:41:14Z
-  > [&#8230;] links to parts : part 1 - part 2 - part 3 &#8211; part 4 &#8211; part [&#8230;]
-* ![Joshua](https://www.gravatar.com/avatar/2546bd6228c4310c26a7eccbe03c3d09?d=identicon) **Joshua** 2015-02-18T18:27:20Z
-  > I'm not sure if I'm doing something wrong, or if I'm expecting more than what is covered in the tutorial. I have a server up and running IdentityServer, for now I've used the IdentityManager admin UI to create a user and add a couple claims to that user. I can use fiddler to call out to the IdentityServer, and get a token. If the token is valid my WebApi will server a resource, if it's invalid it returns a 401. So far so good!  > 
-  >   > 
-  > My problem starts when I want at any of the claims (I'm assuming should have came over) I can't see any of the role claims I've assigned via the Admin UI, or even a name claim which I think should be present. Any suggestions?
-* ![ericswann](https://www.gravatar.com/avatar/7623f1388a30faa176c90a113a17ce4e?d=identicon) **ericswann** 2015-02-06T17:25:20Z
-  > Cedric, what do you see as the advantage in separating the resource service and the account service into separate physical API's?  Is there a reason other than basic separation of concerns?
-* ![cedricdumontc](https://www.gravatar.com/avatar/0c2381d0c8780aa27737666af4c913f6?d=identicon) **[cedricdumontc](http://cedricdumont.wordpress.com)** 2015-02-06T18:07:16Z
-  > in my own case, the account service is kind of private to my app where there will not only be an api to manage accounts but also private api calls for my spa that will be hosted one one server or one webrole on azure. the resource api is more a public api that will be more exposed and will be called more often by customers so deployed on another web role and even another domain. this could be all set up in one app, one web role, but i found it easier to manage and to track api usage. the identity server will perhaps be hosted in another domain and not on azure but another server on another provider. hope it makes sense
+[![3.5](27-2-5.jpg)](27-2-5.jpg)

@@ -16,7 +16,7 @@ Step 1 : create a new Empty Web Project
 
 Create a new Empty web project with no authentication
 
-[![4.1](27-5-1.jpg?w=300)](27-5-1.jpg)
+[![4.1](27-5-1.jpg)](27-5-1.jpg)
 
 **Step 2 : install Semantic-UI and AngularJS**
 
@@ -36,7 +36,7 @@ Create an index.html file and reference all these scripts. Don't forget Jquery (
 
 You should end up with something like this:
 
-[![4.2](27-5-2.jpg?w=700)](27-5-2.jpg)
+[![4.2](27-5-2.jpg)](27-5-2.jpg)
 
 The app folder will contain our angularJs app. We will name it IdentityApp. Check in the body tag of the index.html file where it is referenced.
 
@@ -119,7 +119,7 @@ Once again, the UI is really simple for convenience. The getResource method just
 To test the application, you must run all projects together. Therfor, you need to set the solution with multiple startup project.
 Right click on the solution and select **_Set Startup Projects ..._**
 
-[![4.3](27-5-3.jpg?w=700)](27-5-3.jpg)
+[![4.3](27-5-3.jpg)](27-5-3.jpg)
 
 Then hit **F5**
 
@@ -160,15 +160,18 @@ When I found a better way to do, I will update this doc. please feel free to add
 ## Comments from WordPress
 
 * ![John](https://www.gravatar.com/avatar/46af482bbadaf66e0507f3a2804b3ec2?d=identicon) **John** 2015-01-29T16:42:24Z
-  > Hi, i'm testing your samples and i'm getting an error on app/directives/iValidateAntiForgeryToken.js as nosuch file exists. Where can i find it? Does it has something to do with http://www.fredonism.com/archive/protect-your-web-api-from-csrf-attacks.aspx?  > 
+  > Hi, i'm testing your samples and i'm getting an error on app/directives/iValidateAntiForgeryToken.js as nosuch file exists. Where can i find it? Does it has something to do with http://www.fredonism.com/archive/protect-your-web-api-from-csrf-attacks.aspx?
+  > 
   > Best Regards
 * ![cedricdumontc](https://www.gravatar.com/avatar/0c2381d0c8780aa27737666af4c913f6?d=identicon) **[cedricdumontc](http://cedricdumont.wordpress.com)** 2015-01-29T17:44:29Z
   > you can delete it. it requires using of mvc, but here i didn t want to use mvc. so i left this for the moment. i m still looking for an anti forgery protection but don t know if its necessary in this configuration . i will delete it from the sources
 * **[IdentityServer.v3, MembershipReboot, AngularJs, WebApi 2 and MVC : Mix It ! | {&quot;@id&quot;:&quot;cedric-dumont.com&quot;}](http://cedric-dumont.com/2014/12/26/identityserver-v3-membershipreboot-angularjs-webapi-2-and-mvc-mix-it/)** 2014-12-27T14:41:17Z
   > [&#8230;] links to parts : part 1 - part 2 - part 3 &#8211; part 4 &#8211; part [&#8230;]
 * ![Patrick](https://www.gravatar.com/avatar/a49ddd726fa242c6667682bbb78ce0d0?d=identicon) **Patrick** 2015-02-25T19:40:31Z
-  > Hi Cedric, first of all - great post! I think the "Resource Owner Password Credentials" flow is not recommended to use in a SPA because you expose the client secret. There is an authorization / authentication endpoint in idsvr3 where you can either request access tokens or authorization codes (implicit or authorization code flow). I believe the implicit flow is the right choice because it is the only way to request a token without exposing your client secret in your js code.   > 
-  >   > 
+  > Hi Cedric, first of all - great post! I think the "Resource Owner Password Credentials" flow is not recommended to use in a SPA because you expose the client secret. There is an authorization / authentication endpoint in idsvr3 where you can either request access tokens or authorization codes (implicit or authorization code flow). I believe the implicit flow is the right choice because it is the only way to request a token without exposing your client secret in your js code. 
+  > 
+  > 
+  > 
   > cheers
 * ![cedricdumontc](https://www.gravatar.com/avatar/0c2381d0c8780aa27737666af4c913f6?d=identicon) **[cedricdumontc](http://cedricdumont.wordpress.com)** 2015-02-25T19:45:17Z
   > i totally agree and i related this in the post. it s not good to expose the client secret and it brings us back to as if we use basic authentication. but what i want is not to be redirected to the id server login page but to use a login page in my app.
@@ -177,17 +180,22 @@ When I found a better way to do, I will update this doc. please feel free to add
 * ![cedricdumontc](https://www.gravatar.com/avatar/0c2381d0c8780aa27737666af4c913f6?d=identicon) **[cedricdumontc](http://cedricdumont.wordpress.com)** 2015-01-30T13:43:28Z
   > what is the error? I see that angular-local-storage is already configured in the sources
 * ![John](https://www.gravatar.com/avatar/46af482bbadaf66e0507f3a2804b3ec2?d=identicon) **John** 2015-01-30T19:26:24Z
-  > It gives me null value in angular-local-storage.js when setting the store for any value...  > 
+  > It gives me null value in angular-local-storage.js when setting the store for any value...
+  > 
   > I've commented the LocalStorage writes and used the Session Object instead...
 * ![John](https://www.gravatar.com/avatar/46af482bbadaf66e0507f3a2804b3ec2?d=identicon) **John** 2015-02-25T19:52:48Z
   > That's why the Implicit flow (by design) does not use any client secret, isn' it? And i guess that the Resource Owner Password Flow is suited when you can achieve Direct Authentication, otherwise we will end up with browser redirection's with your Identity Provider/Outhorization Server...
 * ![Patrick](https://www.gravatar.com/avatar/a49ddd726fa242c6667682bbb78ce0d0?d=identicon) **Patrick** 2015-02-25T21:15:10Z
   > Yes, i think the only way to use your own login form without beeing redirected is to do the authentication in your web api backend. There you can use the client secret in a secure way. But i don't like the idea of mixing authentication with business logic. But what's the downside of redirecting to a login page? I think you can customize the idsrv3 login page and maybe you could even integrate the login form into your app so you don't have to redirect? Auth0 has this feature... maybe idsvr3 too?
 * ![James McLachlan (@jamespmclachlan)](https://www.gravatar.com/avatar/76dda9b349d16660931d28c81551c157?d=identicon) **[James McLachlan (@jamespmclachlan)](http://twitter.com/jamespmclachlan)** 2016-02-29T13:22:54Z
-  > Regarding the password/implicit flow client secret issue: one idea I read about is to have an API call in your UI project that accepts just a name and password and makes the grant_type password call with the secret. The call can then return the token details.  > 
+  > Regarding the password/implicit flow client secret issue: one idea I read about is to have an API call in your UI project that accepts just a name and password and makes the grant_type password call with the secret. The call can then return the token details.
+  > 
   > Thanks for the fantastic set of blog posts!
 * ![Lasha Kvantaliani](https://www.gravatar.com/avatar/b2593dc738a7bbc8298ec52ca4cb9733?d=identicon) **[Lasha Kvantaliani](http://ribbler.com)** 2015-09-09T08:57:15Z
-  > Hi, Where may I find "common" module?   > 
-  > Guess Session.create and other methods comes from this module.  > 
-  >   > 
+  > Hi, Where may I find "common" module? 
+  > 
+  > Guess Session.create and other methods comes from this module.
+  > 
+  > 
+  > 
   > In general after init a project app I have know app folder. (just for information - I'm using VS 2015)

@@ -33,6 +33,7 @@ const Layout = ({ data }) => {
           )
         })}
       </div>
+      <Link to="/blog/">More...</Link>
       
     </LayoutBase>
   )

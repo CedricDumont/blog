@@ -20,7 +20,7 @@ In visual studio :
 * select the MVC check box
 * change authentication to : No Authentication
 
-[![5.1](27-13-1.jpg?w=700)](27-13-1.jpg)
+[![5.1](27-13-1.jpg)](27-13-1.jpg)
 
 **Step 2 : create the implicit client**
 
@@ -124,7 +124,7 @@ The _GetResourceWithId()_method calls the public web api using a bearer token (y
 
 You need to add the project in the solution Startup projects list (you could also have only the Identity.server and ResourceExplorer project running)
 
-[![5.2](27-13-2.jpg?w=700)](27-13-2.jpg)
+[![5.2](27-13-2.jpg)](27-13-2.jpg)
 
 Next start the solution and go to the MVC explorer page :
 
@@ -153,10 +153,16 @@ That's It !!!
 * **[IdentityServer.v3, MembershipReboot, AngularJs, WebApi 2 and MVC : Mix It ! | {&quot;@id&quot;:&quot;cedric-dumont.com&quot;}](http://cedric-dumont.com/2014/12/26/identityserver-v3-membershipreboot-angularjs-webapi-2-and-mvc-mix-it/)** 2014-12-27T14:41:19Z
   > [&#8230;] quick links to parts : part 1 - part 2 - part 3 &#8211; part 4 &#8211; part 5 [&#8230;]
 * ![Rohit](https://www.gravatar.com/avatar/f7dcf094d1751b3fd8a1bb9783c9e33c?d=identicon) **Rohit** 2015-11-17T10:50:52Z
-  > Hi Cedric,  > 
-  > Can you please tell from where 'Login' page is displayed ?  > 
-  > I am not able to get that in the project/source code.  > 
-  > Thanks !  > 
-  >   > 
-  > Regards,  > 
+  > Hi Cedric,
+  > 
+  > Can you please tell from where 'Login' page is displayed ?
+  > 
+  > I am not able to get that in the project/source code.
+  > 
+  > Thanks !
+  > 
+  > 
+  > 
+  > Regards,
+  > 
   > Rohit
