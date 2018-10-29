@@ -1,7 +1,7 @@
 ---
 date: "2014-12-13T20:00:30Z"
-title: "Using ontologies and json-ld to describe a "Product""
-categories: ["media types"]
+title: "Using ontologies and json-ld to describe a Product"
+categories: ["media_types"]
 tags: ["jsonld", "ontology", "schema.org"]
 excerpt: "If you are new to semantic web, you might find that there are a lot to read and it's sometimes diff..."
 ---

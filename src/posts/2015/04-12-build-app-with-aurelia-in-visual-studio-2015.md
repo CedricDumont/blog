@@ -3,7 +3,7 @@ date: "2015-04-12T16:59:52Z"
 title: "Build App with Aurelia in Visual Studio 2015"
 categories: ["How-to", "javascript"]
 tags: ["aurelia"]
-excerpt: "This is a quick _How-To_ open the Aurelia Skeleton project in Visual Studio 2015\. (The bad thing f..."
+excerpt: "This is a quick _How-To_ open the Aurelia Skeleton project in Visual Studio 2015"
 ---
 
 This is a quick _How-To_ open the Aurelia Skeleton project in Visual Studio 2015\. (The bad thing for now CTP6, is that it does not support ES6 syntax).
