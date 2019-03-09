@@ -143,4 +143,4 @@ init()
 
 Ok, these are the basics, now I would like to explore the communication with a web api and also the elmish stuff, it seems to be the de factor framework in the Fable world.
 
-any questions ? fill an issue here : https://github.com/CedricDumont/blog
+any questions ? fill an issue here : https://github.com/CedricDumont/blog and refer to this post
