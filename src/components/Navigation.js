@@ -9,7 +9,7 @@ const ListLink = props => (
 
 const Navigation = () => {
     return (
-        <ul style={{ marginBottom: `1em`}}>
+        <ul style={{ marginBottom: `0.3em`}}>
             <ListLink to="/">Home</ListLink>
             <ListLink to="/me/">Me</ListLink>
             <ListLink to="/blog/">Blog</ListLink>
