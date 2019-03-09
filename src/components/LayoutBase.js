@@ -2,6 +2,7 @@ import React from "react"
 import Header from "./Header"
 import layoutStyles from "./layout.module.css"
 import Helmet from "react-helmet"
+import Footer from "./Footer";
 
 
 export default (data) => {
@@ -21,6 +22,7 @@ export default (data) => {
             <Header />
             <hr />
             {children}
+            <Footer/>
         </div>
     )
 }

@@ -13,9 +13,11 @@ const Navigation = () => {
             <ListLink to="/">Home</ListLink>
             <ListLink to="/me/">Me</ListLink>
             <ListLink to="/blog/">Blog</ListLink>
+            <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+                <a href="https://github.com/CedricDumont/blog/issues" target="_blank" rel="noopener noreferrer">Questions ?</a>
+            </li>
         </ul>
     )
-
 }
 
 export default Navigation;
