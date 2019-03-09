@@ -17,7 +17,7 @@ before you dive in, it will probably be better to learn some f# [get-programming
 
 ## Tooling
 
-to install my dev environment on a mac, I followed this path:
+to install my dev environment on a **mac**, I've followed this path:
 - follow this to install Mono, f# etc : https://fsharp.org/use/mac/ (use Vscode part with ionide)
 - also install latest node, yarn and .net core sdk
 - paket is also installed as a globa tool : 
@@ -29,31 +29,29 @@ to install my dev environment on a mac, I followed this path:
 ## Fable First look
 
 let's create tha application in a rootfolder called fullfsharp. 
-type the command in as they flow. I will also add the **cd** command when needed.
+type the command in as they flow. I will also add the `cd` command swhen needed.
 
-### Preparation
+> `mkdir fullfsharp`
 
-> mkdir fullfsharp
-
-> cd fullfsharp
+> `cd fullfsharp`
 
 ### Dotnet stuff
 
-> dotnet new sln -n FullFsharp
+> `dotnet new sln -n FullFsharp`
 
-> dotnet new classlib -n Client -o src -lang f#
+> `dotnet new classlib -n Client -o src -lang f#`
 
-> dotnet sln FullFsharp.sln add src/Client.fsproj
+> `dotnet sln FullFsharp.sln add src/Client.fsproj`
 
-> paket convert-from-nuget
+> `paket convert-from-nuget`
 
-> paket add Fable.Core --project src/Client.fsproj
+> `paket add Fable.Core --project src/Client.fsproj`
 
 ### Javascript stuff
 
-> yarn init -y
+> `yarn init -y`
 
-> yarn add @babel/core fable-compiler fable-loader webpack webpack-cli webpack-dev-server -D
+> `yarn add @babel/core fable-compiler fable-loader webpack webpack-cli webpack-dev-server -D`
 
 create a `webpack.config.js` file at the root with the following content
 
@@ -105,7 +103,7 @@ let add a b = a + b
 printfn "add 1 and 2 = %d " (add 1 2)
 ```
 
-> yarn run webpack-dev-server
+> `yarn run webpack-dev-server`
 
 you should see **add 1 and 2 = 3** in the browser's console !
 
@@ -121,7 +119,7 @@ you should see **add 1 and 2 = 3** in the browser's console !
 
 - also add the *Fable.Import.Browser* package with paket
 
-> paket add Fable.Import.Browser --project src/Client.fsproj
+> `paket add Fable.Import.Browser --project src/Client.fsproj`
 
 - And .... play with it. 
 
@@ -143,9 +141,6 @@ let init() =
 init()
 ```
 
-Ok, these are the basics, now I woould like to explore the communication with a web api and also the elmish stuff, it seems to be the de factor framework in the Fable world.
+Ok, these are the basics, now I would like to explore the communication with a web api and also the elmish stuff, it seems to be the de factor framework in the Fable world.
 
-
-
-
-
+any questions ? fill an issue here : https://github.com/CedricDumont/blog
