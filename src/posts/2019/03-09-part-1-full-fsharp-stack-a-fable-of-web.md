@@ -1,8 +1,8 @@
 ---
 date: "2019-03-09T14:13:12Z"
 title: "Part 1 of Full Fsharp stack : A Fable of web"
-categories: ["tools"]
-tags: ["code"]
+categories: ["f#"]
+tags: ["code", "f#","fable","web"]
 excerpt: "If you have a c#, java, js background like me it might be difficult to dive into this functional f# web stuff like fable and giraffe..."
 ---
 
