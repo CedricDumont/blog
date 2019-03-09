@@ -6,8 +6,6 @@ tags: ["code"]
 excerpt: "If you have a c#, java, js background like me it might be difficult to dive into this functional f# web stuff like fable and giraffe..."
 ---
 
-Part 1 of Full Fsharp stack : A Fable of web
-
 If you have a c#, java, js background like me it might be difficult to dive into this functional [f#](https://fsharp.org/) web stuff like [Fable](https://fable.io/) and [Giraffe](https://github.com/giraffe-fsharp/Giraffe)
 
 For me the most diffcult points were the lack of documentation (or I didn't understand it). This is probably because this stack is not the common stack used for web development which in my opinion that is usually react, angular, .net or springboot, ruby on rails... 
