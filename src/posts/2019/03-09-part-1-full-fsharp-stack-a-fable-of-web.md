@@ -28,7 +28,8 @@ to install my dev environment on a mac, I followed this path:
 
 ## Fable First look
 
-let's create tha application in a rootfolder called fullfsharp
+let's create tha application in a rootfolder called fullfsharp. 
+type the command in as they flow. I will also add the **cd** command when needed.
 
 ### Preparation
 
@@ -54,7 +55,7 @@ let's create tha application in a rootfolder called fullfsharp
 
 > yarn add @babel/core fable-compiler fable-loader webpack webpack-cli webpack-dev-server -D
 
-create a *webpack.config.js* file at the root with the following content
+create a `webpack.config.js` file at the root with the following content
 
 ```js
 var path = require("path");
@@ -79,7 +80,7 @@ module.exports = {
 }
 ```
 
-create a simple index.html file in a public folder with the following content
+create a simple `index.html` file in a folder named **public** with the following content
 
 ```html
 <!doctype html>
@@ -94,7 +95,7 @@ create a simple index.html file in a public folder with the following content
 ```
 ### Add F# code and run
 
-add the following code in Library.fs
+add the following code in `Library.fs`
 
 ```fs
 module Client
@@ -111,7 +112,7 @@ you should see **add 1 and 2 = 3** in the browser's console !
 
 ### interacting with the dom
 
-- in the index.html file add a div above the script import
+- in the `index.html` file add a div above the script import
 
 ```html
     <div class="myDiv"></div>
